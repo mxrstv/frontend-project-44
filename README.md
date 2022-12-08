@@ -3,4 +3,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/6402870c4f2f4a8700d8/maintainability)](https://codeclimate.com/github/mxrstv/frontend-project-44/maintainability)
 
 ## brain-even game demonstration
-[![asciicast](https://asciinema.org/a/pfGbydC1FdmUPuAWv05Zrk6F8.svg)](https://asciinema.org/a/pfGbydC1FdmUPuAWv05Zrk6F8)
+[![asciicast](https://asciinema.org/a/WXwBR5ZksNO3Hh8gWVjGEQCVY.svg)](https://asciinema.org/a/WXwBR5ZksNO3Hh8gWVjGEQCVY)
+
+## brain-calc game demonstration
+[![asciicast](https://asciinema.org/a/SkDfMnKAWNCVHn9n9LwtyYaAB.svg)](https://asciinema.org/a/SkDfMnKAWNCVHn9n9LwtyYaAB)
