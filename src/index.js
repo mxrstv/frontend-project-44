@@ -50,7 +50,7 @@ const getGameQuestion = (game) => {
   return question;
 };
 
-const correctAnswer = (question, game) => {
+const getCorrectAnswer = (question, game) => {
   let answer = '';
   switch (game) {
     case 'even-odd':
@@ -78,7 +78,7 @@ const checkUserAnswer = (userAnswer, expectedAnswer, userName) => {
 
 export {
   numberOfQuestions,
-  correctAnswer,
+  getCorrectAnswer,
   checkUserAnswer,
   getGameQuestion,
 };
