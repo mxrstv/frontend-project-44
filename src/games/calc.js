@@ -9,8 +9,8 @@ import {
 
 export default () => {
   const userName = userGreeting();
-  const game = 'even-odd';
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  const game = 'calc';
+  console.log('What is the result of the expression?');
   let totalCorrectAnswers = 0;
   for (let i = 0; i < numberOfQuestions; i += 1) {
     const question = getGameQuestion(game);
