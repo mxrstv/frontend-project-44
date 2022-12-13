@@ -3,6 +3,7 @@ import userGreeting from './cli.js';
 import { gameEvenOddDescription, getEvenOddQuestion, getCorrectEvenOddAnswer } from './games/even-odd.js';
 import { gameCalcDescription, getCalcQuestion, getCorrectCalcAnswer } from './games/calc.js';
 import { gameGCDDescription, getGCDQuestion, getCorrectGCDAnswer } from './games/gcd.js';
+import { gameProgressionDescription, getProgressionQuestion } from './games/progression.js';
 
 const numberOfQuestions = 3;
 
@@ -17,6 +18,9 @@ const getGameDescription = (game) => {
       break;
     case 'gcd':
       gameDescription = gameGCDDescription;
+      break;
+    case 'progression':
+      gameDescription = gameProgressionDescription;
       break;
     default:
       console.log(`Error: wrong parameter game: ${game}`);
@@ -35,6 +39,9 @@ const getGameQuestion = (game) => {
     case 'gcd':
       question = getGCDQuestion();
       break;
+    case 'progression':
+      question = getProgressionQuestion();
+      break;
     default:
       console.log(`Error: wrong parameter game: ${game}`);
   }
@@ -52,6 +59,9 @@ const getCorrectAnswer = (question, game) => {
       break;
     case 'gcd':
       answer = getCorrectGCDAnswer(question);
+      break;
+    case 'progression':
+      answer = getCorrectProgressionAnswer(question);
       break;
     default:
       console.log(`Error: wrong parameter game: ${game}`);
@@ -77,10 +87,10 @@ export default (game) => {
   console.log(gameDescription);
   let totalCorrectAnswers = 0;
   for (let i = 0; i < numberOfQuestions; i += 1) {
-    const question = getGameQuestion(game);
+    const [question, correctAnswer] = getGameQuestion(game);
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    if (checkUserAnswer(userAnswer, getCorrectAnswer(question, game), userName)) {
+    if (checkUserAnswer(userAnswer, correctAnswer, userName)) {
       totalCorrectAnswers += 1;
     } else {
       break;
