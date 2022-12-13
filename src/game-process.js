@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 import userGreeting from './cli.js';
 import { gameEvenOddDescription, getEvenOddQuestion, getCorrectEvenOddAnswer } from './games/even-odd.js';
 import { gameCalcDescription, getCalcQuestion, getCorrectCalcAnswer } from './games/calc.js';
+import { gameGCDDescription, getGCDQuestion, getCorrectGCDAnswer } from './games/gcd.js';
 
 const numberOfQuestions = 3;
 
@@ -14,6 +15,9 @@ const getGameDescription = (game) => {
     case 'even-odd':
       gameDescription = gameEvenOddDescription;
       break;
+    case 'gcd':
+      gameDescription = gameGCDDescription;
+      break;
     default:
       console.log(`Error: wrong parameter game: ${game}`);
   }
@@ -25,10 +29,12 @@ const getGameQuestion = (game) => {
     case 'even-odd':
       question = getEvenOddQuestion();
       break;
-    case 'calc': {
+    case 'calc':
       question = getCalcQuestion();
       break;
-    }
+    case 'gcd':
+      question = getGCDQuestion();
+      break;
     default:
       console.log(`Error: wrong parameter game: ${game}`);
   }
@@ -43,6 +49,9 @@ const getCorrectAnswer = (question, game) => {
       break;
     case 'calc':
       answer = getCorrectCalcAnswer(question);
+      break;
+    case 'gcd':
+      answer = getCorrectGCDAnswer(question);
       break;
     default:
       console.log(`Error: wrong parameter game: ${game}`);
