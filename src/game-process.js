@@ -4,6 +4,7 @@ import { gameEvenOddDescription, getEvenOddQuestion } from './games/even-odd.js'
 import { gameCalcDescription, getCalcQuestion } from './games/calc.js';
 import { gameGCDDescription, getGCDQuestion } from './games/gcd.js';
 import { gameProgressionDescription, getProgressionQuestion } from './games/progression.js';
+import { gamePrimeDescription, getPrimeQuestion } from './games/prime.js';
 
 const numberOfQuestions = 3;
 
@@ -21,6 +22,9 @@ const getGameDescription = (game) => {
       break;
     case 'progression':
       gameDescription = gameProgressionDescription;
+      break;
+    case 'prime':
+      gameDescription = gamePrimeDescription;
       break;
     default:
       console.log(`Error: wrong parameter game: ${game}`);
@@ -41,6 +45,9 @@ const getGameQuestion = (game) => {
       break;
     case 'progression':
       question = getProgressionQuestion();
+      break;
+    case 'prime':
+      question = getPrimeQuestion();
       break;
     default:
       console.log(`Error: wrong parameter game: ${game}`);

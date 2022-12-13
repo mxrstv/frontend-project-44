@@ -10,3 +10,6 @@
 
 ## brain-gcd game demonstration
 [![asciicast](https://asciinema.org/a/TxEKVQ3JPrw8tLalFkv36mUJU.svg)](https://asciinema.org/a/TxEKVQ3JPrw8tLalFkv36mUJU)
+
+## brain-progression game demonstration
+[![asciicast](https://asciinema.org/a/XSJKIdCFA8lNZ7sTtOxPkG3Ko.svg)](https://asciinema.org/a/XSJKIdCFA8lNZ7sTtOxPkG3Ko)
