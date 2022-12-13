@@ -3,14 +3,6 @@ import { getRandomInt, RandomIntMaxPositive } from '../index.js';
 const gameCalcDescription = 'What is the result of the expression?';
 const calcOperators = ['+', '-', '*'];
 
-const getCalcQuestion = () => {
-  const firstNum = getRandomInt(RandomIntMaxPositive);
-  const secondNum = getRandomInt(RandomIntMaxPositive);
-  const operator = calcOperators[getRandomInt(calcOperators.length)];
-  const question = `${firstNum} ${operator} ${secondNum}`;
-  return question;
-};
-
 const getCorrectCalcAnswer = (question) => {
   const exp = question.split(' ');
   const operator = exp[1];
@@ -33,8 +25,16 @@ const getCorrectCalcAnswer = (question) => {
   return `${result}`;
 };
 
+const getCalcQuestion = () => {
+  const firstNum = getRandomInt(RandomIntMaxPositive);
+  const secondNum = getRandomInt(RandomIntMaxPositive);
+  const operator = calcOperators[getRandomInt(calcOperators.length)];
+  const question = `${firstNum} ${operator} ${secondNum}`;
+  const correctAnswer = getCorrectCalcAnswer(question);
+  return [question, correctAnswer];
+};
+
 export {
   gameCalcDescription,
   getCalcQuestion,
-  getCorrectCalcAnswer,
 };

@@ -22,16 +22,7 @@ const getProgressionQuestion = () => {
   return [question.trim(), correctAnswer];
 };
 
-const getCorrectProgressionAnswer = (question) => {
-  const nums = question.split(' ');
-  indexOfHidden = nums.indexOf('..');
-  if (indexOfHidden >= nums.length / 2) {
-
-  }
-};
-
 export {
   gameProgressionDescription,
   getProgressionQuestion,
-  getCorrectProgressionAnswer,
 };
