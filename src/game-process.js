@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import userGreeting from './cli.js';
+import greetingUser from './cli.js';
 import { gameEvenOddDescription, getEvenOddQuestion } from './games/even-odd.js';
 import { gameCalcDescription, getCalcQuestion } from './games/calc.js';
 import { gameGCDDescription, getGCDQuestion } from './games/gcd.js';
@@ -68,7 +68,7 @@ const checkUserAnswer = (userAnswer, expectedAnswer, userName) => {
 };
 
 export default (game) => {
-  const userName = userGreeting();
+  const userName = greetingUser();
   const gameDescription = getGameDescription(game);
   console.log(gameDescription);
   let totalCorrectAnswers = 0;
