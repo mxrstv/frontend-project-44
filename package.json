@@ -2,8 +2,7 @@
   "name": "@hexlet/code",
   "type": "module",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/mxrstv/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/mxrstv/frontend-project-44/actions)",
-  "main": "index.js",
+  "description": "Console games educational project",
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
