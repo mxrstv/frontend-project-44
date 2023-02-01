@@ -1,4 +1,5 @@
 import getRandomInPosRange from '../getRandomInPosRange.js';
+import gameProcess from '../index.js';
 
 const gameGCDDescription = 'Find the greatest common divisor of given numbers.';
 
@@ -10,7 +11,7 @@ const gcd = (a, b) => {
   return gcd(b, mod);
 };
 
-const getGCDQuestion = () => {
+const generateRound = () => {
   const firstNum = getRandomInPosRange(0, 30);
   const secondNum = getRandomInPosRange(0, 30);
   const question = `${firstNum} ${secondNum}`;
@@ -18,7 +19,4 @@ const getGCDQuestion = () => {
   return [question, `${correctAnswer}`];
 };
 
-export {
-  gameGCDDescription,
-  getGCDQuestion,
-};
+export default () => { gameProcess(gameGCDDescription, generateRound); };

@@ -1,4 +1,5 @@
 import getRandomInPosRange from '../getRandomInPosRange.js';
+import gameProcess from '../index.js';
 
 const gamePrimeDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -16,14 +17,11 @@ const isPrime = (n) => {
   return result;
 };
 
-const getPrimeQuestion = () => {
+const generateRound = () => {
   const num = getRandomInPosRange(0, 100);
   const question = `${num}`;
   const correctAnswer = (isPrime(question) ? 'yes' : 'no');
   return [question, correctAnswer];
 };
 
-export {
-  gamePrimeDescription,
-  getPrimeQuestion,
-};
+export default () => { gameProcess(gamePrimeDescription, generateRound); };

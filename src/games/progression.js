@@ -1,9 +1,10 @@
 import getRandomInPosRange from '../getRandomInPosRange.js';
+import gameProcess from '../index.js';
 
 const gameProgressionDescription = 'What number is missing in the progression?';
 const progressionLength = 10;
 
-const getProgressionQuestion = () => {
+const generateRound = () => {
   const hiddenNum = getRandomInPosRange(0, 10);
   const step = getRandomInPosRange(0, 10);
   const start = getRandomInPosRange(0, 50);
@@ -22,7 +23,4 @@ const getProgressionQuestion = () => {
   return [question.trim(), correctAnswer];
 };
 
-export {
-  gameProgressionDescription,
-  getProgressionQuestion,
-};
+export default () => { gameProcess(gameProgressionDescription, generateRound); };

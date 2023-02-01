@@ -1,4 +1,5 @@
 import getRandomInPosRange from '../getRandomInPosRange.js';
+import gameProcess from '../index.js';
 
 const gameCalcDescription = 'What is the result of the expression?';
 const calcOperators = ['+', '-', '*'];
@@ -25,7 +26,7 @@ const getCorrectCalcAnswer = (question) => {
   return `${result}`;
 };
 
-const getCalcQuestion = () => {
+const generateRound = () => {
   const firstNum = getRandomInPosRange(0, 20);
   const secondNum = getRandomInPosRange(0, 20);
   const operator = calcOperators[getRandomInPosRange(0, calcOperators.length - 1)];
@@ -34,7 +35,4 @@ const getCalcQuestion = () => {
   return [question, correctAnswer];
 };
 
-export {
-  gameCalcDescription,
-  getCalcQuestion,
-};
+export default () => { gameProcess(gameCalcDescription, generateRound); };
