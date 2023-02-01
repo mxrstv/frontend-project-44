@@ -7,7 +7,7 @@ const progressionLength = 10;
 const generateRound = () => {
   const hiddenNum = getRandomInPosRange(0, 10);
   const step = getRandomInPosRange(0, 10);
-  const start = getRandomInPosRange(0, 50);
+  const start = getRandomInPosRange();
   let next = start;
   let question = '';
   let correctAnswer = '';

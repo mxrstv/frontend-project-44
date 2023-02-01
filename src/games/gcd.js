@@ -12,8 +12,8 @@ const gcd = (a, b) => {
 };
 
 const generateRound = () => {
-  const firstNum = getRandomInPosRange(0, 30);
-  const secondNum = getRandomInPosRange(0, 30);
+  const firstNum = getRandomInPosRange(0, 50);
+  const secondNum = getRandomInPosRange(0, 50);
   const question = `${firstNum} ${secondNum}`;
   const correctAnswer = gcd(firstNum, secondNum);
   return [question, `${correctAnswer}`];
