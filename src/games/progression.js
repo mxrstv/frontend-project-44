@@ -1,12 +1,12 @@
-import { getRandomInt, RandomIntMaxPositive } from '../index.js';
+import getRandomInPosRange from '../getRandomInPosRange.js';
 
 const gameProgressionDescription = 'What number is missing in the progression?';
 const progressionLength = 10;
 
 const getProgressionQuestion = () => {
-  const hiddenNum = getRandomInt(10);
-  const step = getRandomInt(10);
-  const start = getRandomInt(RandomIntMaxPositive);
+  const hiddenNum = getRandomInPosRange(0, 10);
+  const step = getRandomInPosRange(0, 10);
+  const start = getRandomInPosRange(0, 50);
   let next = start;
   let question = '';
   let correctAnswer = '';

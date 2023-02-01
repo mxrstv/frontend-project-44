@@ -1,4 +1,4 @@
-import { getRandomInt, RandomIntMaxPositive } from '../index.js';
+import getRandomInPosRange from '../getRandomInPosRange.js';
 
 const gameCalcDescription = 'What is the result of the expression?';
 const calcOperators = ['+', '-', '*'];
@@ -26,9 +26,9 @@ const getCorrectCalcAnswer = (question) => {
 };
 
 const getCalcQuestion = () => {
-  const firstNum = getRandomInt(RandomIntMaxPositive);
-  const secondNum = getRandomInt(RandomIntMaxPositive);
-  const operator = calcOperators[getRandomInt(calcOperators.length)];
+  const firstNum = getRandomInPosRange(0, 20);
+  const secondNum = getRandomInPosRange(0, 20);
+  const operator = calcOperators[getRandomInPosRange(0, calcOperators.length - 1)];
   const question = `${firstNum} ${operator} ${secondNum}`;
   const correctAnswer = getCorrectCalcAnswer(question);
   return [question, correctAnswer];
